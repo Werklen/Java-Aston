@@ -1,8 +1,8 @@
 //Неделько Валерия
-package com.mycompany.app;
+package com.mycompany.NedelkoJava;
 import java.util.Scanner;
 
-public class App {
+public class NedelkoJava {
     public static void main(String[] args) {
 
         // Первая задача
