@@ -2,9 +2,21 @@ package org.lesson12;
 
 class ArrayProcessor {
 
+    public static boolean isArray4x4(String[][] array) {
+        if (array.length != 4) {
+            return false;
+        }
+        for (String[] row : array) {
+            if (row.length != 4) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static int processArray(String[][] array) throws MyArraySizeException, MyArrayDataException {
         // Проверка размера массива
-        if (array.length != 4 || array[0].length != 4) {
+        if (!isArray4x4(array)) {
             throw new MyArraySizeException("Размер массива должен быть 4x4.");
         }
 
