@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","13383","testOnlineReplenishmentBlock","","Mon Nov 04 01:55:08 MSK 2024","passed","Mon Nov 04 01:55:21 MSK 2024","","Lesson_15.MtsTests","Lesson_15.MtsTests","testOnlineReplenishmentBlock"
+"","2857","testDetailsLink","","Mon Nov 04 01:55:43 MSK 2024","passed","Mon Nov 04 01:55:46 MSK 2024","","Lesson_15.MtsTests","Lesson_15.MtsTests","testDetailsLink"
+"","14755","testContinueButtonFunctionality","","Mon Nov 04 01:55:22 MSK 2024","passed","Mon Nov 04 01:55:36 MSK 2024","","Lesson_15.MtsTests","Lesson_15.MtsTests","testContinueButtonFunctionality"
+"","6431","testPlaceholder","","Mon Nov 04 01:55:36 MSK 2024","passed","Mon Nov 04 01:55:43 MSK 2024","","Lesson_15.MtsTests","Lesson_15.MtsTests","testPlaceholder"
