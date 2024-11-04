@@ -6,7 +6,7 @@ import static org.hamcrest.Matchers.equalTo;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.Test;
 
-// здесь не camelCase, потому что в примере в лекции так были описаны методы и мне понравилось
+// здесь не camelCase, потому что в примере в лекции так были описаны методы, и мне понравилось
 public class PostmanEchoTest {
     static {
         RestAssured.baseURI = "https://postman-echo.com";
@@ -67,16 +67,50 @@ public class PostmanEchoTest {
     }
 
     @Test
-    public void test_put_request() {
+    public void test_put_request_200() {
+        given()
+                .header("Content-Type", "application/json")
+                .body("{\"meow\":\"kitik\"}")
+                .when()
+                .put("/put")
+                .then()
+                .statusCode(200)
+                .body("json.meow", equalTo("kitik"));
+    }
+    @Test
+    public void test_patch_request_200() {
+        given()
+                .header("Content-Type", "application/json")
+                .body("{\"key\":\"updatedValue\"}")
+                .when()
+                .patch("/patch")
+                .then()
+                .assertThat()
+                .statusCode(200)
+                .body("json.key", equalTo("updatedValue"));
+    }
+    @Test
+    public void test_post_request_by_id_200() {
         String requestBody = "{\"key\":\"value\"}";
 
         given()
                 .header("Content-Type", "application/json")
                 .body(requestBody)
                 .when()
-                .put("/put")
+                .post("/post/")
                 .then()
+                .assertThat()
                 .statusCode(200)
                 .body("json.key", equalTo("value"));
+    }
+    @Test
+    public void test_delete_request_200() {
+
+        given()
+                .when()
+                .delete("/delete")
+                .then()
+                .assertThat()
+                .statusCode(200);
     }
 }
